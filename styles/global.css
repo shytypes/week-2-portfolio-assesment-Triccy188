@@ -1,10 +1,116 @@
 /* remove default browser spacing*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*title text style*/
-/* the font-family 'JetBrains Mono', has been linked
- * and is available for your use
- * */
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'JetBrains Mono';
+  background: #f4f4f4;
+  color: #333;
+}
+header {
+  background: #0077cc;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 24px;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+section {
+  margin-bottom: 2rem;
+}
+.image{
+  border-radius: 10px;
+  width: 53em;
+  height: 35em;
+  gap: 20px;
+}
+h2 {
+  color: #0077cc;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li::before {
+  content: "✔️ ";
+  color: green;
+}
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono';
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+#form-output {
+  background-color: #f0f8ff;
+  border: 1px solid #cce5ff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #0077cc;
+  color: white;
+}
