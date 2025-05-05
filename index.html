@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>frontend-developer</title>
     <!-- add fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,99 @@
   </head>
   <body>
     <!-- Header Area -->
-    <header></header>
+    <header> Stephen Thereza</header>
     <!-- Main Area -->
     <main>
-      <h1>My Amazing Portfolio</h1>
-    </main>
-  </body>
+      <section>
+          <h2>About Me</h2>
+          <p>HI! my name is Stephen Thereza I’m an aspiring <strong>Front-End Developer</strong> passionate about building responsive, user-friendly websites and turning ideas into real-world digital experiences. Currently sharpening my skills in <strong>HTML, CSS, JavaScript</strong> while i haven't started exploring any modern frameworks like <strong>React</strong> i'm hoping to start soon.</p>
+      </section>
+
+      <section>
+          <h2>Skills</h2>
+          <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Git & GitHub</li>
+              <li>Responsive Design</li>
+              <li>Figma (basic wireframing)</li>
+          </ul>
+          <img src="assets/images/girl code" alt=" a girl that codes" class="image">
+      </section>
+
+      <section>
+          <h2>Projects</h2>
+          <p>I'm currently working on personal and practice projects to strengthen my web development skills. More updates coming soon!</p>
+      </section>
+
+      <section>
+          <h2>What I’m Working On</h2>
+          <ul>
+              <li>Deepening Html knowledge</li>
+              <li>Learning JavaScript</li>
+              <li>Improving CSS for design and responsiveness</li>
+          </ul>
+      </section>
+
+      <section>
+          <h2>Let's Connect!</h2>
+          <p>I'm always open to collaboration, feedback, and learning from others in tech.</p>
+          <p>
+              🔗 <a href="#">LinkedIn</a><br>
+              💻 <a href="#">GitHub</a><br>
+              📧 Email: <a href="therezastephen104@gmail.com">therezastephen104@gmail.com</a>
+          </p>
+      </section>
+      <!-- Contact Form Section -->
+      <section>
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="firstName">First Name:</label><br />
+          <input type="text" id="firstName" name="firstName" required /><br />
+
+          <label for="lastName">Last Name:</label><br />
+          <input type="text" id="lastName" name="lastName" required /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" required></textarea><br />
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="form-output" style="margin-top: 1rem;"></div>
+      </section>
+  </main>
+
+  <footer>
+      <p>&copy; Thereza— Beginner Front-End Developer</p>
+  </footer>
+  <!-- JavaScript for DOM manipulation -->
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const output = `
+        <h3>Form Submission:</h3>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `;
+
+      document.getElementById("form-output").innerHTML = output;
+
+// Reset the form after displaying the message
+      this.reset();
+    });
+  </script>
+
+</body>
 </html>
